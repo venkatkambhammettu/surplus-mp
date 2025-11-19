@@ -1,12 +1,12 @@
 import '@servicenow/sdk/global';
 import { Table, StringColumn, DateTimeColumn, BooleanColumn, ReferenceColumn, DecimalColumn, IntegerColumn, ChoiceColumn } from '@servicenow/sdk/core';
 
-// Surplus Request table extending the Case table
+// Surplus Request table extending the Task table
 // This table manages requests for surplus asset disposition
 export const x_863538_surp_mp_surplus_request = Table({
   name: 'x_863538_surp_mp_surplus_request',
   label: 'Surplus Request',
-  extends: 'sn_customerservice_case', // Extends the Customer Service Case table for workflow capabilities
+  extends: 'task', // Extends the Task table for workflow capabilities
   display: 'number',
   accessible_from: 'public',
   caller_access: 'tracking',
@@ -66,7 +66,7 @@ export const x_863538_surp_mp_surplus_request = Table({
       }
     }),
 
-    // Request ownership and contacts
+    // Request ownership and contacts (Task table provides assigned_to, but we need requestor)
     requestor: ReferenceColumn({
       label: 'Requestor',
       referenceTable: 'sys_user',
@@ -82,16 +82,6 @@ export const x_863538_surp_mp_surplus_request = Table({
       label: 'Business Justification',
       maxLength: 4000,
       mandatory: true
-    }),
-
-    assigned_to: ReferenceColumn({
-      label: 'Assigned To',
-      referenceTable: 'sys_user'
-    }),
-
-    assignment_group: ReferenceColumn({
-      label: 'Assignment Group',
-      referenceTable: 'sys_user_group'
     }),
 
     // Timeline and dates
@@ -250,7 +240,7 @@ export const x_863538_surp_mp_surplus_request = Table({
 
     last_status_update: DateTimeColumn({
       label: 'Last Status Update',
-      default: 'javascript:gs.nowDateTime();'
+      default: 'javascript:new GlideDateTime().getDisplayValue();'
     }),
 
     status_update_reason: StringColumn({

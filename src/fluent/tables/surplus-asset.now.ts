@@ -81,7 +81,7 @@ export const x_863538_surp_mp_surplus_asset = Table({
     identified_date: DateTimeColumn({
       label: 'Identified Date',
       mandatory: true,
-      default: 'javascript:gs.nowDateTime();'
+      default: 'javascript:new GlideDateTime().getDisplayValue();'
     }),
 
     approved_by: ReferenceColumn({

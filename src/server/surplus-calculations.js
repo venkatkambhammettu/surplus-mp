@@ -55,6 +55,9 @@ export function updateSurplusRequestTotals(current, previous) {
             var netRecovery = totalActualValue - disposalCost;
             requestGR.setValue('net_recovery_value', netRecovery.toFixed(2));
             
+            // Update last status update timestamp
+            requestGR.setValue('last_status_update', new GlideDateTime().getDisplayValue());
+            
             requestGR.update();
         }
     }

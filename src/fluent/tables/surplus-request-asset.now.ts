@@ -109,7 +109,7 @@ export const x_863538_surp_mp_surplus_request_asset = Table({
     added_to_request_date: DateTimeColumn({
       label: 'Added to Request Date',
       mandatory: true,
-      default: 'javascript:gs.nowDateTime();'
+      default: 'javascript:new GlideDateTime().getDisplayValue();'
     }),
 
     added_by: ReferenceColumn({
