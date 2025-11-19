@@ -1,0 +1,2532 @@
+import '@servicenow/sdk/global'
+
+declare global {
+    namespace Now {
+        namespace Internal {
+            interface Keys extends KeysRegistry {
+                explicit: {
+                    bom_json: {
+                        table: 'sys_module'
+                        id: 'f2ef1a1dc99d4616a5992df706aa72f8'
+                    }
+                    calculate_disposition_days: {
+                        table: 'sys_script'
+                        id: '58b996fb23ec4417b8c08830d19e6e47'
+                    }
+                    calculate_request_asset_totals: {
+                        table: 'sys_script'
+                        id: '3d421c0c378c4c108742a3aa59791f6d'
+                    }
+                    package_json: {
+                        table: 'sys_module'
+                        id: 'ffaccdd94fae41948a1ec8e6bbc91fb7'
+                    }
+                    'src_server_surplus-asset-status-update_js': {
+                        table: 'sys_module'
+                        id: '8dde0117bdbf4a9ab8190100884676a4'
+                    }
+                    'src_server_surplus-calculations_js': {
+                        table: 'sys_module'
+                        id: 'b0ec937e953449ef91a15db488a55aa1'
+                    }
+                    surplus_asset_status_update: {
+                        table: 'sys_script'
+                        id: '6ab565559f124dcb87b488d83af11a60'
+                    }
+                    update_request_totals: {
+                        table: 'sys_script'
+                        id: 'bc9389dde8cc45bb8bff4f0d52ba3eaf'
+                    }
+                }
+                composite: [
+                    {
+                        table: 'sys_index'
+                        id: '0197ad994a874eaeafb1076f015472fb'
+                        key: {
+                            logical_table_name: 'x_863538_surp_mp_surplus_request_asset'
+                            col_name_string: 'surplus_request'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '0232828a1a6847a9b34d5fd16d0c4ef3'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'priority'
+                            value: 'high'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '02e51affa7e542ec908a17514cea40de'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'approval_level'
+                            value: 'legal'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '030b257cb9ad445f8d33f4cf4f872e79'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'requestor'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '03a6b2105c0c4650bfeca35cb428c44c'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'disposition_method'
+                            value: 'donate'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '063694f0db2b48a084d8d7384322ea24'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'disposition_outcome'
+                            value: 'returned_to_inventory'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '0659abb28290494c8446dbd399791cac'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_notes'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '0790852532de46cab15072a5a9a49425'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'approval_level'
+                            value: 'finance'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '07c70e43ec8349778a7794f68899339e'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'requires_special_handling'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '092dd1e9668b4648b9b95c9f4ad3a457'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_disposition_method'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '0b78f54e26664247a80d036e11ecf470'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'condition_assessment'
+                            value: 'non_functional'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '0b86a728ebaf4f72b8b23e60b7e8f838'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'disposition_outcome'
+                            value: 'redeployed'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '0be6fa5dc0684e72a4e1d597685147d4'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'preferred_disposition'
+                            value: 'donate'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '0c9a23107290427dbd991306bc6d5706'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'disposition_outcome'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '0d6d2caac540498d94432def1e121d15'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'erp_sync_status'
+                            value: 'synced'
+                        }
+                    },
+                    {
+                        table: 'sys_db_object'
+                        id: '0e2e990de68b43239b4d73dcce11fd3d'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '0e41b3e32f6e4d52899dee8a9b9704a6'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'total_actual_value'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '0ff8797967e84ba2bb18bdd8e8067fe5'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'assigned_to'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '10ab5171d8e2470eb6a5adb7aaafd39f'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_reason'
+                            value: 'damaged'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '10e2324e7e5444ff86678877f6baa799'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'request_type'
+                            value: 'bulk_disposition'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '14bfd5d97e0849d3ab9089d205dccc7f'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'estimated_value'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '16420b3be49147ea9d86b04fd663e343'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'environmental_review_required'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '16b3eaa2cfbb49f498041f6c2a2fd6a2'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'delivery_instructions'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '17f0b2b905ce4f33b9e293a1141898c3'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'condition_assessment'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '18a005f235ca4a3b86e75e6f97b87bd7'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_status'
+                            value: 'identified'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '1a811196388745f78796d0ece95d613b'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'processing_days'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '1aa8a9792bae41b08dbd671b76d3265d'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'condition_at_request'
+                            value: 'poor'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '1b25757dd31b4364b03c1b797126471f'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'preferred_disposition'
+                            value: 'recycle'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '1b6a7af7b0b24e668c5b281a036cbbc7'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'approved_date'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '1e029214509c46f6a71e6f8f26685966'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'erp_sync_status'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '1e967f2a4be746cf8dadc4274713480f'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_number'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '1ebcf86f074146efa0e4af80d5ac7f70'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'current_location'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '208342b43ecc47b997b9c70268c46e5a'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'last_inventory_date'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '24565a6181da4aad9f5a1ff0696fb68e'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'total_estimated_value'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '249d92bdc5ef4ea4a6512067355a258e'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'approval_notes'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '250e384eed374d4994cb2cba4a97d15b'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'disposition_restrictions'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '2528e3ce361f40c4a9a251b3b2ca6e30'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_reason'
+                            value: 'other'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '2542a648de5d4546ab3944bb095063ac'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'preferred_disposition'
+                            value: 'redeploy'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '26ed1aa5edd74c2ca11092985a1da2b3'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_status'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '285222513d794705b8d062a21284e01c'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'data_security_review_required'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '29b61c5cfba94b15b78c367d97a518f1'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'approval_level'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '29dbfffc575641fb88ac1f5bb7380214'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'approved_by'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '2a565376991e4739b70952ee560e4ae8'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'assignment_group'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '2b04c46b96f745f993d9138bfa62e0af'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'compliance_reviewed_by'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '2b071126663642b4a65dace48d1d309e'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'disposition_outcome'
+                            value: 'donated'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '2ba416fc26d34f179cc5cecb0b2cb2eb'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'requested_completion_date'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '2c8223635d6244089b56b8bb481c5bcf'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'data_wipe_date'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '2ea45e19058b44988557d17c00191f55'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'request_type'
+                            value: 'auction_setup'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '2f0987d78a1f435cbc04e8a8f3872ae0'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'request_status'
+                            value: 'submitted'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '304e2be5869546409e59b87179633523'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_disposition_method'
+                            value: 'auction'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '323fc99a37ec44fbadba6b3028efc300'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'recipient_organization'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '3270255316ef4f9eb2724cb79c244303'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'request_status'
+                            value: 'draft'
+                        }
+                    },
+                    {
+                        table: 'sys_number'
+                        id: '34d8190678104ae1bfa38dd3cedc6b8f'
+                        key: {
+                            category: 'x_863538_surp_mp_surplus_request'
+                            prefix: 'SREQ'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '36440a27195a45e9838adf207195a51a'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'recipient_organization'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '36e17702ba594087b9d35037e72f88fe'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'external_tracking_id'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '39f5c164f7374c15a35015d7ebe72a36'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'request_status'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '3c87b6a29fe643f5b5ee2b1ecad1e16a'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'priority'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '3d208da6bd7f4fa19c40bfee0719fed1'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'data_wipe_verified_by'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '3d591232f8a74b6c94fcf74e20995e3b'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_disposition_method'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '3fb82eca3a3b44e18e880680e1b57f12'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'target_completion_date'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '408a3485d0a443f3b428ecb8a5b4b140'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'condition_assessment'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '4239a958f31f49cc903de880ad589e95'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'quantity'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '425f1f474eb7437a9aaca2c36bb0e9ea'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'delivery_instructions'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '43441094641545db9f16fff59258cfe8'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'approved_by'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '43f7c5c250d94eeba1b1f56d06915023'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'unit_actual_value'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '44c7ea03908e4d53bf00354f13908c8d'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'condition_at_request'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '46219dcf75904ee79fa10c9e82480ad1'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'approval_notes'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '467db641577d458ca00536220de628f4'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'last_status_update'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '48f87103158045f6b2192e68f5e09145'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'actual_completion_date'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '4c3464745bb343aba000838846564b18'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'request_status'
+                            value: 'completed'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '4c49632f7df44d8986837c298d4a670f'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'erp_sync_status'
+                            value: 'not_required'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '4e28c9ccc6f94562af72fb7155a891dc'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'external_asset_id'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '4f2b2de965434f1c84e1d8af6416ff2e'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_status_in_request'
+                            value: 'on_hold'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '51de026394d54aefbbf0ce929faccba4'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_status'
+                            value: 'cancelled'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '526bc9d1de60448d8115d607bc9a5035'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'business_justification'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '5423f75df2f84261bea6b81a0a0ebaed'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'request_type'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '558af0206a1943d5a855addc7484d407'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'unit_actual_value'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '55b2ed8354c84ceaac334a78f555bff3'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_status_in_request'
+                            value: 'completed'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '55eadeaa1ba44b08bfa1e2b7c28e075b'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'priority'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '57372454f554437b83f34bdfa1fbdd3d'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'data_wipe_date'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '588cf7a373c543319e5e8ddb251347dc'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_reason'
+                            value: 'technology_upgrade'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '5a527231c5d54c26a5691b2357f02997'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'approved_by'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '5a86f925601043a183b6610ca730e34b'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'condition_at_request'
+                            value: 'fair'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '5ae5479a1c6d4c708355b5c72f651b93'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'market_value'
+                        }
+                    },
+                    {
+                        table: 'sys_index'
+                        id: '5c8aaef51d8d422c88b4d6959142f28c'
+                        key: {
+                            logical_table_name: 'x_863538_surp_mp_surplus_request_asset'
+                            col_name_string: 'surplus_asset'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '5d10845967774d95a10925063ec41736'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'total_disposal_cost'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '5db726cc743641b5b5248ea463dba4bb'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'erp_sync_status'
+                            value: 'failed'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '5e3a3dac766046c49465a1c19242a6fb'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_reason'
+                            value: 'redundant'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '5f2606d997e1485da09cf8a0d17559e8'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'target_completion_date'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '5fb7b74afe774752817918f5f51b9ee9'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'NULL'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '5fd0466a1dca4708bf19f58e31d66897'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'estimated_total_value'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '600de802d4004c11952c22026111684e'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'preferred_disposition'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '608372cc2db6459384772f891215fc91'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'current_location'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '610c0bb234754bad8898d8e1f5f3ef63'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'external_request_id'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '61225f72cbe540d186747ae88b1ddbb0'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'request_status'
+                            value: 'rejected'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '617c2772fa6e45b9919356cd81b6a433'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'priority'
+                            value: 'critical'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '638c24b6d7064011b55f53e1639d4caa'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'request_status'
+                            value: 'approved'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '641fd621e4d844f0b563d34d981fb38c'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'vendor_quote_reference'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '64323610463f49df9374d10e5e46f364'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'NULL'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '6468b6c8755e4fad966deef43f971749'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'compliance_review_date'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_number'
+                        id: '64ff8ee50d1f47f5a986d7148da7bab7'
+                        key: {
+                            category: 'x_863538_surp_mp_surplus_request_asset'
+                            prefix: 'SRA'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '669c4cc701114bfe9978d39512138f22'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'requires_approval'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '68769157da7048cfb3c8f3e10b10f0cc'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'environmental_compliance_verified'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '692d0b34cadb42879b2eaab962bb423d'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'data_wiped'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '696d14629c64426cb9ff8f230361c589'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'disposition_priority'
+                            value: 'medium'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '69f636937cca4da8a4b3040ec8cdd79a'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'disposition_method'
+                            value: 'auction'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '6b1c8f5345cd46348addc1f11dfaf83b'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'regulatory_compliance_verified'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '6bafd50363444c49bbecc31757756095'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'compliance_reviewed_by'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '6c3ae86c8c634f3f80be44df3a557033'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'actual_total_value'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '6c96c009a2a94843acebeb32991b3580'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'approved_by'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '6cabe597e0d04513ab7d50fae7cc3467'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_reason'
+                            value: 'downsizing'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '6cbf335cd811406f86d1f6b7c4fa9f18'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_disposition_method'
+                            value: 'dispose'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '6dba7f04965f4a84bf9d2db7eef3a6e5'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'project_code'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '6e68526538c44cb0934e7323c03442e7'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'days_in_surplus'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '729c98bd95d643049d9e2feb20bb0029'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'surplus_asset'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '74fe9c36884546dd99eb73b1bc9539b7'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'target_disposition_date'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '76348159e1b04af5aa22845674de1cdf'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'condition_assessment'
+                            value: 'good'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '76eec00cd68c4d77ac9da1fc84a80d6d'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'display_name'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '7a59ffd02a194599b82cf14fba6896e8'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'surplus_request'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '7c297bddfc0f421792e592e664f039b1'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'status_update_reason'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '7c3a5270a4674beba16f77609dfc4c51'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'request_status'
+                            value: 'under_review'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '7cb19ff2ef6349999b1ab8d64901a10a'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'disposition_priority'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '7d709166ba6c4a9986ce25301234d73f'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'requires_special_handling'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '7d8dbb49df5943aeb1ba183467922c8b'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'requested_completion_date'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'ua_table_licensing_config'
+                        id: '7dcd54a49e4a40a3acd19990e776be64'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '7fca318feb174458a84a7b0a4e57c347'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'requestor'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '7fe3da9ab7ca4f3cb720b1404946926c'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_status_in_request'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '7ff3d1af50634c76b61acdce9d5d9081'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'data_wipe_verified_by'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '809a0f5b89ff46f781732f445cd749ec'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'external_asset_id'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '80a1c821e85646869605f0eadc5bff72'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'external_request_id'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '81567b6204a84f4f8d51da47d5f319eb'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'data_sanitization_required'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '817f81e78c70463abab8eb0c0efd981b'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'disposition_outcome'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '8180be74998a45a99e49d48c922bd67e'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_status'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '81eeaff6afe34e4db37e8454e04b3e87'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'target_disposition_date'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '845673c0e67c4f669c758e6b666d8257'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'priority'
+                            value: 'low'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '84b5c2bc5e1548378b7a330d1976942e'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'quantity'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '84ba9892a9424cfbbfcb05e2713968cb'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'disposition_method'
+                            value: 'redeploy'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '86c928e141eb46ceaf5dfbb372dbe106'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'market_value'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '87e2bd9c5bb3480ebc9a976cd9aafe2b'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'project_code'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '8969f9dd91a04f5a997b134f4044297c'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'added_by'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '8a89ff31722447faa395ab90b3bf6689'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'approval_level'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '8b3a9945e1d64999ac87cb2d11d9a727'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'request_status'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '8d019b37dfb943c094474e4296b4010a'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'request_type'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '8d57965a79684603a704558999841666'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'condition_at_request'
+                            value: 'excellent'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '8dfab047f6b442bca874ecba2d932a68'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_status_in_request'
+                            value: 'pending'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '8efae13c88474fedb0fe015bae4669c5'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'NULL'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '90845b8449914ef791ed489b20f45d5b'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'submitted_date'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '90aa35d34ee647a18355944d33fbc085'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'request_status'
+                            value: 'in_progress'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '9243635fb69d431387e385798726d8b8'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'compliance_review_required'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '9255b489eabc451b8b970e55c2ec9b8f'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'actual_total_value'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '92791c76066a4170b15d0cfbd009a6d6'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'request_type'
+                            value: 'disposition'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '932bf91d2b7649afafdea5369e62d5f5'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'assigned_to'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '9383425fa0f14001b0fb536dd027786d'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'data_sanitization_complete'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '94d3baea1a7d4aaea53e8672f3e842b4'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'added_to_request_date'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '950493160eef4d318514327816b02546'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'actual_disposition_date'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '9539c21d418b41a885878755420e59f5'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'erp_sync_status'
+                            value: 'pending'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '9607e6115cfa4ac08ca8d685d46dbf13'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'disposition_priority'
+                            value: 'low'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '966150032b524693ada004bc617a7f72'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'data_sanitization_method'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '966285e1ac4344d68eec3bfe59d7f1de'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'requestor_department'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '96caadd951ef4e91bcb143c94b0afd8c'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'data_wipe_method'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '97e1d6b2712d4b428eb4c2ee4c15ed84'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'approval_level'
+                            value: 'manager'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '984218fc72244133a50076c59f2ce59c'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'environmental_review_required'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '98bbc27d9c274245a05550c22f4d8628'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'pickup_location'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '9905b76bf8b24a7a874f131343fe28b3'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'unit_estimated_value'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '995412fefb3444d194d1169efc1fe3db'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'requires_approval'
+                        }
+                    },
+                    {
+                        table: 'ua_table_licensing_config'
+                        id: '9983441a39c14bf3af1715c09318108c'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '9d81b83a20a34476965d0c54ddfc4fc8'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'last_inventory_date'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '9dd500190aeb4b23b151ae5892163825'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'disposition_method'
+                            value: 'sell'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '9ecc2f09c3f24d9d9c46216f4fd3de06'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'disposition_priority'
+                            value: 'urgent'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '9f5e388063264c7bbb887703b93bd8e7'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'cost_center'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '9f5f008ce03240289d30d4303b6bf01e'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'data_wipe_method'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'a03e915620a147a79c1d27ea450ae3b5'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'disposal_certificate_number'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'a093b7e58caf4a53b38e2054367d47d6'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'vendor_quote_reference'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'a0ac03525a544aab8973526071ce4cfa'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'days_to_disposition'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'a27b35bad5024ac8a5378a8c276771b9'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'compliance_review_required'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'a284c15bf2e54f6e93d7444ab18383d8'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'condition_at_request'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'a2a258da15324f57a86b50ea92753461'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_status'
+                            value: 'disposed'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'a55ee12890214db2a80aa8e5492b28cb'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_status_in_request'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'a58c8a19f296471381817179de5ad6e5'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'total_actual_value'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'a6752c0db54344739e4468b616d1074a'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'net_recovery_value'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'a6fa5ca5c44340528a1203accdc77f69'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_reason'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'a847379220134682946741c3fa09c7c2'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_notes'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'a881a51f17d348be947e7708c95b000e'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'total_estimated_value'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'a90ba01b6d344479a56796cf2f2c2d85'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'disposal_cost'
+                        }
+                    },
+                    {
+                        table: 'ua_table_licensing_config'
+                        id: 'a9d71cd202764a2ca8e93fe99d7ced7c'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'aaa1e46236ce400181178233ef99fbab'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_disposition_method'
+                            value: 'sell'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'ab60380e9ade41609fd63fd96ed564fa'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'preferred_disposition'
+                            value: 'sell'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'ab8416ebf9c14e1db8c56239694e5103'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'data_sanitization_method'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'ac1b0db4c2ca434f8f1d99639d8b83ea'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_reason'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_db_object'
+                        id: 'acd7304a7a1b40f7b3227c38abead754'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'ae0f4d6d6bbd4ad48535598b479259c2'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'disposition_method'
+                            value: 'recycle'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'afd01c12e0a94290894ca10fc832aedc'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'actual_disposition_date'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'b03261b385854b10974a805531f8a9fd'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'data_security_review_required'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'b090e10a86754d11aec1d85a9a2e1254'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'priority'
+                            value: 'medium'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'b1b86586a4fd489c9138080295c97980'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'data_sanitization_required'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'b1c7ae528d2d4022be1220510dc9809f'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'data_sanitization_date'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'b1dabe37069c454e8e3d7ccefe4b3425'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'environmental_considerations'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'b1f4020280d443b6891c387f69441db1'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'environmental_compliance_verified'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'b222ba57d7894ca6a6b9a2f23d5d7b7d'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'disposition_restrictions'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'b2577920e7fd472997ee290edd7f7724'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'last_status_update'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'b33aaec953bf42fc93e548503f7fc822'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_notes'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'b3a17902168f4fff970ba306aa5fa7a5'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'regulatory_compliance_verified'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'b3b01669f2424e10b17e238e1c3392b6'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'disposition_priority'
+                            value: 'high'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'b44d2a394488452a9fa0a376618838f3'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'identified_date'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'b45c9e6bd4d14cabb0740f2f4a1e029d'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'disposition_outcome'
+                            value: 'sold'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'b62573f569aa4812b7e54a3b76564329'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'request_type'
+                            value: 'internal_transfer'
+                        }
+                    },
+                    {
+                        table: 'sys_number'
+                        id: 'b66c89bd616146d5b5e9338842f1586e'
+                        key: {
+                            category: 'x_863538_surp_mp_surplus_asset'
+                            prefix: 'SRP'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'b6c07edf31c045868d4179ced9ae3ea0'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'preferred_disposition'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'b6e2e6220d064c5da364be8312d48a67'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'approval_level'
+                            value: 'executive'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'b6ed098b3c314d4286831f694c4843bb'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'NULL'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'b788fb3539ee4a88bc0840f2202aecf6'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'business_justification'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'b8cb49fd133a47a8b9a42f8c45785fbb'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'cost_center'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'bab11739879147f6ad59ea039c0c6907'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'sale_reference_number'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'bad911b0c9884f438b0657518311c937'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_notes'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'bc1286d97a5341e7aed9b715d6bb7fec'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_status_in_request'
+                            value: 'approved'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'bca91d0bde9e493383c2a1c4ddae28c7'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'data_sanitization_complete'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'bd155d520b5446bf91f99c143bc51ed7'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'added_to_request_date'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'bf47db959f2441eea775cd764a87bd38'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_status'
+                            value: 'pending_approval'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'c0d7b3c9f58747cd89b7eacc2da61f2e'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'environmental_considerations'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'c16e0934713549089b36dfbf198157e2'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'special_instructions'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'c1f11f6614fc4497a7eb9a1ab5aa2a5d'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'total_disposal_cost'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'c26ca932dc3f410eb7d5d2098ab0628b'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'condition_assessment'
+                            value: 'excellent'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'c2f103afbef84479885ba3b2654ef6fc'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'internal_notes'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'c40310da889d43a28a6224688700be08'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'days_to_disposition'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'c4458151e350497ebd8c446e3612c6fd'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'display_name'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'c4a048e2105e461ab6a03f826a1bc854'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'data_sanitization_date'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'c4ac6d716df94d0ba421771816c7c4ab'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'disposition_outcome'
+                            value: 'disposed'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'c4ef2cfdfc104b13ad2b237b3d0a0bf7'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'disposal_cost'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'c5daac1a951d42a690777f42c7bc33d0'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'days_in_surplus'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'c65fceac680446baa7e04467bac5767b'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'sale_reference_number'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'c77abd76c0514a8ebb79f7527d1fc752'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'approved_date'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'c8622ba7683640c1b1dd9056d81532dc'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'surplus_request'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'c9a1b7c0b584439288ea0b2585e6de70'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'special_instructions'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'cacac6bbea4e4b3fa16e4f7d960b04d0'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'total_assets'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'cb76d8d489cf46b0866a91885c607c43'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'disposition_method'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'cc28f0dca8694194889eb4272927034a'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'condition_assessment'
+                            value: 'poor'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'cd9380e015ca433cbaa95ffb43fe477d'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'condition_at_request'
+                            value: 'non_functional'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'ce0afb4e0064452aaeb148f7e929c99f'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_reason'
+                            value: 'underutilized'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'cebb51eaec03440e90912ca0fed1e05a'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'preferred_disposition'
+                            value: 'dispose'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'cebe9af5223a422786a5bef84ba9960e'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'requestor_department'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'cff1e90506e44de3a358d031e21eefc3'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'total_assets'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'd3aff9bab7f14d8eae10ce74f9f24176'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_status'
+                            value: 'in_disposition'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'd5e18527cab94de9b107fd958e770fff'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'current_location'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'd6c3c7f7a5514c5eb342e541c58dd0db'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'special_handling_notes'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'd7edffcaa8814f1fbb4b190fc43e396a'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_reason'
+                            value: 'lease_expiration'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'd8685c2002654e80a5a8697bae76ef7d'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'processing_days'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'd8d0da6245ae4ffcaa6a3edeed63f548'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'identified_by'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'd9713a56776244068879958dc9a7d730'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'NULL'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'da6301289d8d4a70ac451ec430956d93'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'external_tracking_id'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'dad0ac53f50f4887bb8edf1a4fd623e0'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_status_in_request'
+                            value: 'cancelled'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'e0af894e2142440e93d519ed7a566c2d'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_number'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'e16534449dca40a6a80f2251efef85c4'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'added_by'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'e1b94387d5e84cd0af305cfbea1e6bc1'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_disposition_method'
+                            value: 'recycle'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'e2362ba4809d433fbf46dc3fb8f20b0e'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_disposition_method'
+                            value: 'donate'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'e2484f79f0304d59905f80ba7351a6bb'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'compliance_review_date'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'e272365a7a284743a4c5a4639c76c475'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'submitted_date'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'e32bed4a725444b18f6e5bb6b77d3173'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'estimated_value'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'e55b0ddd0f2d4d36b25695af5c7c006b'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'identified_by'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'e5969552deaf486cb1b5fbe9d25b5500'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'erp_sync_status'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'e603b29850544a1aac32bcec06abda48'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'disposal_certificate_number'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'e6d12780e4b849629a97acbf3dc5f652'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'estimated_total_value'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'e8d66ef5ef864bcfb846e95aafe67983'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'condition_assessment'
+                            value: 'fair'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'e9cec863d4354cfc807ecd0ed91e7922'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'net_recovery_value'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'ea7d73b8f1164df1904e5df4bacb2573'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'status_update_reason'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'eac9df8144924b81b78728a6ae2814b7'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'special_handling_notes'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'eb2d69bc8e9c47ecbbdc10628751646f'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'data_wiped'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'eb55eb996f234433899326ca7c171143'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'surplus_asset'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_db_object'
+                        id: 'ec60252ca00e4f73a8ec66cacb0fdcc9'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'ed60cc50deed4be6971f01858dfa77a4'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'approved_date'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'edf2070b93c14ac5900ce0e38900b237'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'actual_completion_date'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'f013b7b08cf24ebc97c11de91a828e63'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'approval_level'
+                            value: 'director'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'f0570d61c0ef475e8dab8311fa13197d'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'approved_date'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'f0903631731b42a9a186466b6f1fddd2'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'disposition_method'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'f26c57da946f4d33aacf766ae718d63d'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'pickup_location'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'f2f3bca2e4824902a077ad8180813f74'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'disposition_method'
+                            value: 'dispose'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'f3d88b85c74a4a47be64a99d35b55376'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_status'
+                            value: 'approved'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'f5bb0dba8a9248d3bccca0ccea2ac504'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'condition_at_request'
+                            value: 'good'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'f60f83ff10334bc48e263f61b9ec75e7'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'unit_estimated_value'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'f62cabe3c1044736aabb5161e6af2d86'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_status_in_request'
+                            value: 'in_disposition'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'f66dcc80c694457cb091b9ca42b0aeca'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'internal_notes'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'f68d7f45c1d44f91ac6980cf2c790cfe'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'NULL'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'f737c9812ab240ec8914ee23585c654d'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'disposition_priority'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'f77ae81b0a334523a4a8ef6c7a3eb950'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'disposition_outcome'
+                            value: 'recycled'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'f9a786340361455ab091956ce4d3b318'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'request_status'
+                            value: 'cancelled'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'fb8758d694f24f49ac38fe1c70c9a670'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'current_location'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'fc7350a0e49d4058aad659c1194c5199'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request'
+                            element: 'assignment_group'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'fe187d465452469a96f139cb49c97daa'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_request_asset'
+                            element: 'asset_disposition_method'
+                            value: 'redeploy'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'ff088989fda34dfc8504ad083e5ce9f6'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'surplus_reason'
+                            value: 'end_of_life'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'fffae99d75d840cfac4bc7e5acf45934'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            element: 'identified_date'
+                        }
+                    },
+                ]
+            }
+        }
+    }
+}
