@@ -794,6 +794,31 @@ declare global {
                         table: 'sys_script'
                         id: '6ab565559f124dcb87b488d83af11a60'
                     }
+                    'surplus-marketplace-catalog': {
+                        table: 'sc_catalog'
+                        id: 'c01eca273b344a389f195771b2777560'
+                    }
+                    'surplus-marketplace-category': {
+                        table: 'sc_category'
+                        id: 'f27003db1e944ed3a40be903b366d622'
+                    }
+                    'surplus-marketplace-portal': {
+                        table: 'sp_portal'
+                        id: '81319a7565ee484da57387ffbf1fe005'
+                    }
+                    'surplus-request-producer': {
+                        table: 'sc_cat_item_producer'
+                        id: '10258db50af446fcbbbc6c497b5a4dbd'
+                        deleted: true
+                    }
+                    'surplus-request-producer-category-link': {
+                        table: 'sc_cat_item_category'
+                        id: 'a40ca324cba2415098eaca01ac0e233b'
+                    }
+                    'surplus-request-producer-v2': {
+                        table: 'sc_cat_item_producer'
+                        id: 'f8e8c05364ba4d9dbc35097fe8f2b419'
+                    }
                     test_surplus_asset_1: {
                         table: 'x_863538_surp_mp_surplus_asset'
                         id: 'fd6f7b1ba4d44fed98577041790812af'
@@ -822,8 +847,39 @@ declare global {
                         table: 'x_863538_surp_mp_surplus_request'
                         id: '6fc8db5ec37a46fb8ed04955965a7668'
                     }
+                    'x_863538_surp_mp/main': {
+                        table: 'sys_ux_lib_asset'
+                        id: '9dd8a3499502422c99bf316fff2bfef3'
+                    }
+                    'x_863538_surp_mp/main.js.map': {
+                        table: 'sys_ux_lib_asset'
+                        id: '6748cce9ea76458d80c8df573db1d17c'
+                    }
                 }
                 composite: [
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '00c1942357bb4f95acb14246ccf29041'
+                        key: {
+                            list_id: {
+                                id: 'd9dac347d5fa4a33a4274203ddd1d737'
+                                key: {
+                                    name: 'x_863538_surp_mp_surplus_asset'
+                                    view: {
+                                        id: 'd692f6fd8b1a4a67b47be44a7705fd49'
+                                        key: {
+                                            name: 'surplus_asset_list'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'disposition_priority'
+                        }
+                    },
                     {
                         table: 'sys_index'
                         id: '0197ad994a874eaeafb1076f015472fb'
@@ -940,6 +996,13 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_view'
+                        id: '0c60f5de11e949b19aa1dfcbcc2455bc'
+                        key: {
+                            name: 'surplus_asset_default'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '0c9a23107290427dbd991306bc6d5706'
                         key: {
@@ -1026,6 +1089,29 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: '16c3c5fc88c94595b969dac6c1b302fd'
+                        key: {
+                            list_id: {
+                                id: 'd9dac347d5fa4a33a4274203ddd1d737'
+                                key: {
+                                    name: 'x_863538_surp_mp_surplus_asset'
+                                    view: {
+                                        id: 'd692f6fd8b1a4a67b47be44a7705fd49'
+                                        key: {
+                                            name: 'surplus_asset_list'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'current_location'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '17f0b2b905ce4f33b9e293a1141898c3'
                         key: {
@@ -1103,6 +1189,29 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: '200775f9891c48588d6ae59ef8622c09'
+                        key: {
+                            list_id: {
+                                id: 'd9dac347d5fa4a33a4274203ddd1d737'
+                                key: {
+                                    name: 'x_863538_surp_mp_surplus_asset'
+                                    view: {
+                                        id: 'd692f6fd8b1a4a67b47be44a7705fd49'
+                                        key: {
+                                            name: 'surplus_asset_list'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'surplus_reason'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '208342b43ecc47b997b9c70268c46e5a'
                         key: {
@@ -1152,6 +1261,29 @@ declare global {
                             name: 'x_863538_surp_mp_surplus_asset'
                             element: 'preferred_disposition'
                             value: 'redeploy'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '26424d1c5a504d2ca022f10edf716084'
+                        key: {
+                            list_id: {
+                                id: 'd9dac347d5fa4a33a4274203ddd1d737'
+                                key: {
+                                    name: 'x_863538_surp_mp_surplus_asset'
+                                    view: {
+                                        id: 'd692f6fd8b1a4a67b47be44a7705fd49'
+                                        key: {
+                                            name: 'surplus_asset_list'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'approved_by'
                         }
                     },
                     {
@@ -1708,6 +1840,29 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: '67cbde975571410c96a5a8a337c3dfdd'
+                        key: {
+                            list_id: {
+                                id: 'd9dac347d5fa4a33a4274203ddd1d737'
+                                key: {
+                                    name: 'x_863538_surp_mp_surplus_asset'
+                                    view: {
+                                        id: 'd692f6fd8b1a4a67b47be44a7705fd49'
+                                        key: {
+                                            name: 'surplus_asset_list'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'identified_date'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '68769157da7048cfb3c8f3e10b10f0cc'
                         key: {
@@ -1972,6 +2127,29 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: '81e97ae20aa24e7eaedd85c38ac92348'
+                        key: {
+                            list_id: {
+                                id: 'd9dac347d5fa4a33a4274203ddd1d737'
+                                key: {
+                                    name: 'x_863538_surp_mp_surplus_asset'
+                                    view: {
+                                        id: 'd692f6fd8b1a4a67b47be44a7705fd49'
+                                        key: {
+                                            name: 'surplus_asset_list'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'surplus_status'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '81eeaff6afe34e4db37e8454e04b3e87'
                         key: {
@@ -2012,6 +2190,29 @@ declare global {
                             name: 'x_863538_surp_mp_surplus_asset'
                             element: 'market_value'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '87bbadfdbd59444e8787e70b27d2b5bf'
+                        key: {
+                            list_id: {
+                                id: 'd9dac347d5fa4a33a4274203ddd1d737'
+                                key: {
+                                    name: 'x_863538_surp_mp_surplus_asset'
+                                    view: {
+                                        id: 'd692f6fd8b1a4a67b47be44a7705fd49'
+                                        key: {
+                                            name: 'surplus_asset_list'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'estimated_value'
                         }
                     },
                     {
@@ -2383,6 +2584,29 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: 'a80269a015454a349ac335760f6a8f87'
+                        key: {
+                            list_id: {
+                                id: 'd9dac347d5fa4a33a4274203ddd1d737'
+                                key: {
+                                    name: 'x_863538_surp_mp_surplus_asset'
+                                    view: {
+                                        id: 'd692f6fd8b1a4a67b47be44a7705fd49'
+                                        key: {
+                                            name: 'surplus_asset_list'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'display_name'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: 'a847379220134682946741c3fa09c7c2'
                         key: {
@@ -2540,6 +2764,29 @@ declare global {
                         key: {
                             name: 'x_863538_surp_mp_surplus_request'
                             element: 'last_status_update'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: 'b2c1c70b086e4a55b59c27ae0f18c456'
+                        key: {
+                            list_id: {
+                                id: 'd9dac347d5fa4a33a4274203ddd1d737'
+                                key: {
+                                    name: 'x_863538_surp_mp_surplus_asset'
+                                    view: {
+                                        id: 'd692f6fd8b1a4a67b47be44a7705fd49'
+                                        key: {
+                                            name: 'surplus_asset_list'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'identified_by'
                         }
                     },
                     {
@@ -2740,6 +2987,29 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_list_element'
+                        id: 'c37eff8bfa5349b3b9e3fc4ea2ccad6f'
+                        key: {
+                            list_id: {
+                                id: 'd9dac347d5fa4a33a4274203ddd1d737'
+                                key: {
+                                    name: 'x_863538_surp_mp_surplus_asset'
+                                    view: {
+                                        id: 'd692f6fd8b1a4a67b47be44a7705fd49'
+                                        key: {
+                                            name: 'surplus_asset_list'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'condition_assessment'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: 'c40310da889d43a28a6224688700be08'
                         key: {
@@ -2916,6 +3186,13 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_view'
+                        id: 'd692f6fd8b1a4a67b47be44a7705fd49'
+                        key: {
+                            name: 'surplus_asset_list'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: 'd6c3c7f7a5514c5eb342e541c58dd0db'
                         key: {
@@ -2955,6 +3232,23 @@ declare global {
                         key: {
                             name: 'x_863538_surp_mp_surplus_request'
                             element: 'NULL'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list'
+                        id: 'd9dac347d5fa4a33a4274203ddd1d737'
+                        key: {
+                            name: 'x_863538_surp_mp_surplus_asset'
+                            view: {
+                                id: 'd692f6fd8b1a4a67b47be44a7705fd49'
+                                key: {
+                                    name: 'surplus_asset_list'
+                                }
+                            }
+                            sys_domain: 'global'
+                            element: 'NULL'
+                            relationship: 'NULL'
+                            parent: 'NULL'
                         }
                     },
                     {
@@ -3126,6 +3420,29 @@ declare global {
                         id: 'ec60252ca00e4f73a8ec66cacb0fdcc9'
                         key: {
                             name: 'x_863538_surp_mp_surplus_request_asset'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: 'ed05067408a8480e959f5e8b377e6024'
+                        key: {
+                            list_id: {
+                                id: 'd9dac347d5fa4a33a4274203ddd1d737'
+                                key: {
+                                    name: 'x_863538_surp_mp_surplus_asset'
+                                    view: {
+                                        id: 'd692f6fd8b1a4a67b47be44a7705fd49'
+                                        key: {
+                                            name: 'surplus_asset_list'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'surplus_number'
                         }
                     },
                     {
